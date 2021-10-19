@@ -50,7 +50,7 @@
   var defaultGenerator = generateNames(window.names);
 
   var gen = function () {
-    var names = times(15, defaultGenerator);
+    var names = times(150, defaultGenerator);
 
     list.empty();
 
