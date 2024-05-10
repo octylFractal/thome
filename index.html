@@ -27,7 +27,7 @@
           <div class="uk-grid">
             <div class="uk-width-1-4 uk-text-center">
               <div class="uk-panel uk-panel-box uk-panel-box-secondary">
-                <form action="" class="uk-form uk-form-stacked">
+                <form id="form" action="" class="uk-form uk-form-stacked">
                   <div class="uk-form-row">
                     <label class="uk-form-label" for="max-frag">Maximum name fragments</label>
                     <div class="uk-form-controls uk-grid">
@@ -38,7 +38,15 @@
                     </div>
                   </div>
                   <div class="uk-form-row">
-                    <button class="uk-button uk-button-large uk-width-9-10" type="button" id="name-button">Generate More Names</button>
+                    <label class="uk-form-label" for="prefix">Name prefix</label>
+                    <div class="uk-form-controls uk-grid">
+                        <div class="uk-width-4-5 uk-container-center">
+                            <input id="prefix" class="uk-width-4-5" type="text"/>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="uk-form-row">
+                    <button class="uk-button uk-button-large uk-width-9-10" type="submit" id="name-button">Generate More Names</button>
                   </div>
                 </form>
                 <hr class="uk-grid-divider"/>

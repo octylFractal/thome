@@ -1,10 +1,11 @@
 (function (window, document) {
 
-  var button = $('#name-button');
+  var form = $('#form');
   var list = $('#name-list');
   var possib = $('#total-possible');
   var maxFrag = $('#max-frag');
   var maxFragDisplay = $('#max-frag-display');
+  var prefix = $('#prefix');
 
   var minLength = 2;
   var maxLength = 2;
@@ -26,7 +27,7 @@
   var generateNames = function (names) {
     return function () {
       var length = randomInt(minLength, maxLength);
-      return times(length, function () {
+      return (prefix.val() || '') + times(length, function () {
         return names[randomInt(0, names.length - 1)];
       }).join('');
     };
@@ -67,7 +68,10 @@
   };
 
   maxFrag.on('input', possible);
-  button.on('click', gen);
+  form.on('submit', (evt) => {
+    evt.preventDefault();
+    gen();
+  });
 
   possible();
   gen();

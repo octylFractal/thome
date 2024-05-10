@@ -31,6 +31,7 @@
     'cadu', 'ceus', // no, mercury doesn't actually have a moon
     'neith', // neither does venus
     'mun', 'mon', // some nice fragments as well
+    'lu', 'lun',
 
     'pho', 'bos',
     'dei', 'mos',
